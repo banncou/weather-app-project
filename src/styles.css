@@ -190,3 +190,18 @@ p {
   margin-bottom: 10px;
   font-size: 20px;
 }
+
+#open-source-code {
+  color: #666363;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 19px;
+  position: relative;
+  left: 545px;
+  margin: 0;
+  padding: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
