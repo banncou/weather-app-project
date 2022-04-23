@@ -1,0 +1,192 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  color: white;
+  margin: 0;
+  margin-top: -20px;
+  margin-bottom: 5px;
+  text-align: left;
+  list-style: none;
+  position: relative;
+  left: 3px;
+}
+
+h2 {
+  color: #666363;
+  font-size: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+  left: 5px;
+}
+
+h3 {
+  color: #666363;
+  font-size: 15px;
+}
+
+ul {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+li {
+  color: white;
+  font-size: 15px;
+  font-weight: 200;
+  height: 20px;
+  line-height: 19px;
+  text-align: left;
+  list-style: none;
+  position: relative;
+  left: 5px;
+}
+
+p {
+  color: white;
+  font-size: 15px;
+  font-weight: 200;
+  height: 20px;
+  line-height: 19px;
+  text-align: left;
+  list-style: none;
+  position: relative;
+  left: 5px;
+  margin-bottom: 0px;
+}
+
+.fa-location-dot {
+  position: relative;
+  top: -29px;
+  left: 225px;
+  font-size: 20px;
+  color: white;
+  margin-top: 2.8px;
+}
+
+.fa-location-dot:hover {
+  color: black;
+}
+
+.form-control {
+  border: none;
+}
+
+.weather-app {
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 500px;
+  height: 640px;
+  border-radius: 15px;
+  background-image: url(../img/background-image-sun.png);
+  background-size: contain;
+}
+
+.units {
+  color: white;
+  position: relative;
+  top: -78px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.btn {
+  position: relative;
+  top: -33px;
+  left: 217px;
+  font-size: 15px;
+  padding: 3.6px 15px;
+  margin-top: 2.5px;
+  color: #666363;
+  border: none;
+  transition: all 200ms ease-in-out;
+}
+
+.btn:hover {
+  background: #fbb03b;
+  color: white;
+}
+
+.date {
+  color: white;
+  font-size: 15px;
+  font-weight: 200;
+  height: 20px;
+  line-height: 19px;
+  text-align: left;
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.time {
+  color: white;
+  font-size: 15px;
+  font-weight: 200;
+  height: 20px;
+  line-height: 19px;
+  text-align: left;
+  list-style: none;
+  position: relative;
+  margin: 0 0 8px;
+  left: 5px;
+  padding: 0;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.temperature {
+  color: white;
+  font-size: 130px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.listTwo {
+  color: white;
+  margin-top: 15px;
+}
+
+.full-week-weather {
+  color: #666363;
+  margin-top: 70px;
+  font-size: 15px;
+  font-weight: 200;
+  height: 20px;
+  line-height: 19px;
+  text-align: center;
+  list-style: none;
+  position: relative;
+  left: 5px;
+  margin-bottom: 15px;
+  padding: auto;
+}
+
+#description {
+  color: white;
+  font-size: 15px;
+  font-weight: 200;
+  height: 20px;
+  line-height: 19px;
+  text-align: left;
+  list-style: none;
+  position: relative;
+  left: 0;
+  margin: 0 0 8px;
+  padding: 0;
+}
+
+#weather-icons {
+  color: #666363;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
