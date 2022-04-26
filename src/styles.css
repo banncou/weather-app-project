@@ -193,12 +193,12 @@ p {
 
 #open-source-code {
   color: #666363;
-  font-size: 15px;
   font-weight: 200;
-  position: relative;
-  left: 545px;
-  margin: 0;
-  padding: 0;
+  font-size: 12px;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: block;
 }
 
 a:link {
