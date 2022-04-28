@@ -1,5 +1,4 @@
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
+function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -38,7 +37,9 @@ function formatDate(timestamp) {
   ];
   let month = months[monthIndex];
 
-  return `${day}, ${month} ${hours}:${minutes}`;
+  let number = date.getDate();
+
+  return `${day}, ${month} ${number}, ${hours}:${minutes}`;
 }
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
