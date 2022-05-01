@@ -96,6 +96,16 @@ function displayWeatherCondition(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
 
+  document.querySelector("#maxTemperature").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector("#minTemperature").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+  document.querySelector("#feelsLike").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
+
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
