@@ -52,6 +52,27 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
+  let days = ["MON", "TUES", "WED", "THURS", "FRI", "SAT"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+
+    <div class="col-2">
+      <div class="weather-forecast-date">${day}</div>
+      <i class="wi wi-day-sunny" id="weather-icons"></i>
+      <br />
+      <div class="weather-forecast-temperatures">
+        <span class="full-forecast-temperature-max">20°</span>
+        <span class="full-forecast-temperature-min">15°</span>
+      </div>
+    </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
@@ -169,3 +190,4 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Toronto");
+displayForecast();
