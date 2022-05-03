@@ -165,10 +165,27 @@ p {
   line-height: 19px;
   text-align: center;
   list-style: none;
-  position: relative;
-  left: 5px;
+  display: block;
   margin-bottom: 15px;
   padding: auto;
+}
+
+.weather-forecast-date {
+  color: #666363;
+  font-size: 15px;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.weather-forecast-temperatures {
+  color: #666363;
+  font-size: 13px;
+}
+
+.weather-forecast-temperature-min {
+  color: #666363;
+  opacity: 0.6;
+  font-size: 13px;
 }
 
 #description {
