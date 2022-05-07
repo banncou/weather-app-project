@@ -81,6 +81,7 @@ p {
   border-radius: 15px;
   background-image: url(../img/background-image-sun.png);
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .units {
