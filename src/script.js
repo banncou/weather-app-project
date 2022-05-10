@@ -70,7 +70,14 @@ function displayForecast(response) {
 
     <div class="col-2">
       <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-       <i class="wi wi-day-sunny" id="weather-icons"></i>
+        <img
+          src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
+          alt=""
+          width="42"
+        />
+      
       <br />
       <div class="weather-forecast-temperatures">
         <span class="full-forecast-temperature-max">${Math.round(
@@ -84,6 +91,15 @@ function displayForecast(response) {
   `;
     }
   });
+
+  let forecastDay = forecastDay.weather[0].icon;
+  let icon = "";
+  if (forecastDay === "clear sky") {
+    icon = `<span class="wi wi-day-sunny"></span>`;
+  }
+  if (forecastDay === "broken clouds") {
+    icon = `<span class="wi wi-cloudy"></span>`;
+  }
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
