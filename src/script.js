@@ -68,71 +68,51 @@ function displayForecast(response) {
       let icon = "";
       if (forecastDayDesc === "clear sky") {
         icon = `<span class="wi wi-day-sunny"></span>`;
-      }
-      if (forecastDayDesc === "broken clouds") {
+      } else if (forecastDayDesc === "broken clouds") {
         icon = `<span class="wi wi-cloudy"></span>`;
-      }
-      if (forecastDayDesc === "broken clouds: 51-84%") {
+      } else if (forecastDayDesc === "broken clouds: 51-84%") {
         icon = `<span class="wi wi-cloudy"></span>`;
-      }
-      if (forecastDayDesc === "overcast clouds: 85-100%") {
+      } else if (forecastDayDesc === "overcast clouds") {
         icon = `<span class="wi wi-cloudy"></span>`;
-      }
-      if (forecastDayDesc === "few clouds") {
+      } else if (forecastDayDesc === "overcast clouds: 85-100%") {
+        icon = `<span class="wi wi-cloudy"></span>`;
+      } else if (forecastDayDesc === "few clouds") {
         icon = `<span class="wi wi-day-cloudy"></span>`;
-      }
-      if (forecastDayDesc === "few clouds: 11-25%") {
+      } else if (forecastDayDesc === "few clouds: 11-25%") {
         icon = `<span class="wi wi-day-cloudy"></span>`;
-      }
-      if (forecastDayDesc === "scattered clouds") {
+      } else if (forecastDayDesc === "scattered clouds") {
         icon = `<span class="wi wi-cloud"></span>`;
-      }
-      if (forecastDayDesc === "scattered clouds: 25-50%") {
+      } else if (forecastDayDesc === "scattered clouds: 25-50%") {
         icon = `<span class="wi wi-cloud"></span>`;
-      }
-      if (forecastDayDesc === "shower rain") {
+      } else if (forecastDayDesc === "shower rain") {
         icon = `<span class="wi wi-showers"></span>`;
-      }
-      if (forecastDayDesc === "rain") {
+      } else if (forecastDayDesc === "rain") {
         icon = `<span class="wi wi-day-rain"></span>`;
-      }
-      if (forecastDayDesc === "light rain") {
+      } else if (forecastDayDesc === "light rain") {
         icon = `<span class="wi wi-day-rain"></span>`;
-      }
-      if (forecastDayDesc === "moderate rain") {
+      } else if (forecastDayDesc === "moderate rain") {
         icon = `<span class="wi wi-day-rain"></span>`;
-      }
-      if (forecastDayDesc === "heavy intensity rain") {
+      } else if (forecastDayDesc === "heavy intensity rain") {
         icon = `<span class="wi wi-day-rain"></span>`;
-      }
-      if (forecastDayDesc === "very heavy rain") {
+      } else if (forecastDayDesc === "very heavy rain") {
         icon = `<span class="wi wi-day-rain"></span>`;
-      }
-      if (forecastDayDesc === "extreme rain") {
+      } else if (forecastDayDesc === "extreme rain") {
         icon = `<span class="wi wi-day-rain"></span>`;
-      }
-      if (forecastDayDesc === "freezing rain") {
+      } else if (forecastDayDesc === "freezing rain") {
         icon = `<span class="wi wi-day-rain"></span>`;
-      }
-      if (forecastDayDesc === "light intensity shower rain") {
+      } else if (forecastDayDesc === "light intensity shower rain") {
         icon = `<span class="wi wi-day-rain"></span>`;
-      }
-      if (forecastDayDesc === "shower rain") {
+      } else if (forecastDayDesc === "shower rain") {
         icon = `<span class="wi wi-day-rain"></span>`;
-      }
-      if (forecastDayDesc === "heavy intensity shower rain") {
+      } else if (forecastDayDesc === "heavy intensity shower rain") {
         icon = `<span class="wi wi-day-rain"></span>`;
-      }
-      if (forecastDayDesc === "ragged shower rain") {
+      } else if (forecastDayDesc === "ragged shower rain") {
         icon = `<span class="wi wi-day-rain"></span>`;
-      }
-      if (forecastDayDesc === "thunderstorm") {
+      } else if (forecastDayDesc === "thunderstorm") {
         icon = `<span class="wi wi-thunderstorm"></span>`;
-      }
-      if (forecastDayDesc === "snow") {
+      } else if (forecastDayDesc === "snow") {
         icon = `<span class="wi wi-snow"></span>`;
-      }
-      if (forecastDayDesc === "mist") {
+      } else if (forecastDayDesc === "mist") {
         icon = `<span class="wi wi-dust"></span>`;
       }
 
@@ -143,13 +123,6 @@ function displayForecast(response) {
     <div class="col-2">
       <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
       ${icon}
-        <img
-          src="http://openweathermap.org/img/wn/${
-            forecastDay.weather[0].icon
-          }@2x.png"
-          alt=""
-          width="42"
-        />
       
       <br />
       <div class="weather-forecast-temperatures">

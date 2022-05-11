@@ -181,6 +181,7 @@ p {
 .weather-forecast-temperatures {
   color: #666363;
   font-size: 13px;
+  padding-top: 10px;
 }
 
 .full-forecast-temperature-min {
