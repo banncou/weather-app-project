@@ -64,12 +64,85 @@ function displayForecast(response) {
 
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
+      let forecastDayDesc = forecastDay.weather[0].description;
+      let icon = "";
+      if (forecastDayDesc === "clear sky") {
+        icon = `<span class="wi wi-day-sunny"></span>`;
+      }
+      if (forecastDayDesc === "broken clouds") {
+        icon = `<span class="wi wi-cloudy"></span>`;
+      }
+      if (forecastDayDesc === "broken clouds: 51-84%") {
+        icon = `<span class="wi wi-cloudy"></span>`;
+      }
+      if (forecastDayDesc === "overcast clouds: 85-100%") {
+        icon = `<span class="wi wi-cloudy"></span>`;
+      }
+      if (forecastDayDesc === "few clouds") {
+        icon = `<span class="wi wi-day-cloudy"></span>`;
+      }
+      if (forecastDayDesc === "few clouds: 11-25%") {
+        icon = `<span class="wi wi-day-cloudy"></span>`;
+      }
+      if (forecastDayDesc === "scattered clouds") {
+        icon = `<span class="wi wi-cloud"></span>`;
+      }
+      if (forecastDayDesc === "scattered clouds: 25-50%") {
+        icon = `<span class="wi wi-cloud"></span>`;
+      }
+      if (forecastDayDesc === "shower rain") {
+        icon = `<span class="wi wi-showers"></span>`;
+      }
+      if (forecastDayDesc === "rain") {
+        icon = `<span class="wi wi-day-rain"></span>`;
+      }
+      if (forecastDayDesc === "light rain") {
+        icon = `<span class="wi wi-day-rain"></span>`;
+      }
+      if (forecastDayDesc === "moderate rain") {
+        icon = `<span class="wi wi-day-rain"></span>`;
+      }
+      if (forecastDayDesc === "heavy intensity rain") {
+        icon = `<span class="wi wi-day-rain"></span>`;
+      }
+      if (forecastDayDesc === "very heavy rain") {
+        icon = `<span class="wi wi-day-rain"></span>`;
+      }
+      if (forecastDayDesc === "extreme rain") {
+        icon = `<span class="wi wi-day-rain"></span>`;
+      }
+      if (forecastDayDesc === "freezing rain") {
+        icon = `<span class="wi wi-day-rain"></span>`;
+      }
+      if (forecastDayDesc === "light intensity shower rain") {
+        icon = `<span class="wi wi-day-rain"></span>`;
+      }
+      if (forecastDayDesc === "shower rain") {
+        icon = `<span class="wi wi-day-rain"></span>`;
+      }
+      if (forecastDayDesc === "heavy intensity shower rain") {
+        icon = `<span class="wi wi-day-rain"></span>`;
+      }
+      if (forecastDayDesc === "ragged shower rain") {
+        icon = `<span class="wi wi-day-rain"></span>`;
+      }
+      if (forecastDayDesc === "thunderstorm") {
+        icon = `<span class="wi wi-thunderstorm"></span>`;
+      }
+      if (forecastDayDesc === "snow") {
+        icon = `<span class="wi wi-snow"></span>`;
+      }
+      if (forecastDayDesc === "mist") {
+        icon = `<span class="wi wi-dust"></span>`;
+      }
+
       forecastHTML =
         forecastHTML +
         `
 
     <div class="col-2">
       <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+      ${icon}
         <img
           src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
@@ -91,15 +164,6 @@ function displayForecast(response) {
   `;
     }
   });
-
-  let forecastDay = forecastDay.weather[0].icon;
-  let icon = "";
-  if (forecastDay === "clear sky") {
-    icon = `<span class="wi wi-day-sunny"></span>`;
-  }
-  if (forecastDay === "broken clouds") {
-    icon = `<span class="wi wi-cloudy"></span>`;
-  }
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
