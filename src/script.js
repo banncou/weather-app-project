@@ -180,6 +180,46 @@ function displayWeatherCondition(response) {
 
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 
+  let displayWeatherCondition = response.data.weather[0].main;
+  if (displayWeatherCondition === "clear sky") {
+    document.querySelector("#situation").innerHTML = "Sunny";
+    document.querySelector("#icon").setAttribute("src", "img/sun-icon.png");
+    document.querySelector("#container").classList.add("background-image-sun");
+    document
+      .querySelector("#container")
+      .classList.remove("background-image-clouds", "background-image-rain");
+  }
+  if (displayWeatherCondition === "broken clouds") {
+    document.querySelector("#situation").innerHTML = "Cloudy";
+    document.querySelector("#icon").setAttribute("src", "img/clouds-icon.png");
+    document
+      .querySelector("#container")
+      .classList.add("background-image-clouds");
+    document
+      .querySelector("#container")
+      .classList.remove("background-image-sun", "background-image-rain");
+  }
+  if (
+    (displayWeatherCondition === "rain",
+    "shower rain",
+    "light rain",
+    "moderate rain",
+    "heavy intensity rain",
+    "very heavy rain",
+    "extreme rain",
+    "freezing rain",
+    "light intensity shower rain",
+    "heavy intensity shower rain",
+    "ragged shower rain")
+  ) {
+    document.querySelector("#situation").innerHTML = "Rain";
+    document.querySelector("#icon").setAttribute("src", "img/rain-icon.png");
+    document.querySelector("#container").classList.add("background-image-rain");
+    document
+      .querySelector("#container")
+      .classList.remove("background-image-sun", "background-image-clouds");
+  }
+
   getForecast(response.data.coord);
 }
 
