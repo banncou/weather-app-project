@@ -112,7 +112,27 @@ function displayForecast(response) {
         icon = `<span class="wi wi-thunderstorm"></span>`;
       } else if (forecastDayDesc === "snow") {
         icon = `<span class="wi wi-snow"></span>`;
+      } else if (forecastDayDesc === "rain and snow") {
+        icon = `<span class="wi wi-snow"></span>`;
       } else if (forecastDayDesc === "mist") {
+        icon = `<span class="wi wi-dust"></span>`;
+      } else if (forecastDayDesc === "smoke") {
+        icon = `<span class="wi wi-dust"></span>`;
+      } else if (forecastDayDesc === "haze") {
+        icon = `<span class="wi wi-dust"></span>`;
+      } else if (forecastDayDesc === "sand/dust whirls") {
+        icon = `<span class="wi wi-dust"></span>`;
+      } else if (forecastDayDesc === "fog") {
+        icon = `<span class="wi wi-dust"></span>`;
+      } else if (forecastDayDesc === "sand") {
+        icon = `<span class="wi wi-dust"></span>`;
+      } else if (forecastDayDesc === "dust") {
+        icon = `<span class="wi wi-dust"></span>`;
+      } else if (forecastDayDesc === "volcanic ash") {
+        icon = `<span class="wi wi-dust"></span>`;
+      } else if (forecastDayDesc === "squalls") {
+        icon = `<span class="wi wi-dust"></span>`;
+      } else if (forecastDayDesc === "tornado") {
         icon = `<span class="wi wi-dust"></span>`;
       }
 
@@ -203,7 +223,8 @@ function displayWeatherCondition(response) {
     displayWeatherCondition === "scattered clouds" ||
     displayWeatherCondition === "scattered clouds: 25-50%" ||
     displayWeatherCondition === "broken clouds: 51-84%" ||
-    displayWeatherCondition === "overcast clouds: 85-100%"
+    displayWeatherCondition === "overcast clouds: 85-100%" ||
+    displayWeatherCondition === "overcast clouds"
   ) {
     document.querySelector("#icon").setAttribute("src", "img/clouds-icon.png");
     document
@@ -261,6 +282,22 @@ function displayWeatherCondition(response) {
     displayWeatherCondition === "shower drizzle"
   ) {
     document.querySelector("#icon").setAttribute("src", "img/rain-icon.png");
+    document.querySelector("#container").classList.add("background-image-rain");
+    document
+      .querySelector("#container")
+      .classList.remove("background-image-sun", "background-image-clouds");
+  } else if (
+    displayWeatherCondition === "mist" ||
+    displayWeatherCondition === "smoke" ||
+    displayWeatherCondition === "haze" ||
+    displayWeatherCondition === "sand/dust whirls" ||
+    displayWeatherCondition === "fog" ||
+    displayWeatherCondition === "sand" ||
+    displayWeatherCondition === "dust" ||
+    displayWeatherCondition === "volcanic ash" ||
+    displayWeatherCondition === "squalls"
+  ) {
+    document.querySelector("#icon").setAttribute("src", "img/mist-icon.png");
     document.querySelector("#container").classList.add("background-image-rain");
     document
       .querySelector("#container")

@@ -68,7 +68,7 @@ p {
 }
 
 .fa-location-dot:hover {
-  color: black;
+  color: #0071bc;
 }
 
 .form-control {
@@ -96,7 +96,7 @@ p {
 }
 
 .btn:hover {
-  background: #fbb03b;
+  background: #0071bc;
   color: white;
 }
 
@@ -146,7 +146,7 @@ p {
 
 .full-week-weather {
   color: #666363;
-  margin-top: 60px;
+  margin-top: 50px;
   font-size: 15px;
   font-weight: 200;
   height: 20px;
@@ -177,10 +177,42 @@ p {
   text-align: center;
 }
 
-#container {
+.background-image-sun {
   max-width: 480px;
   height: 640px;
   background-image: url(../img/background-image-sun.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  transition: all 200ms fade-out 200ms;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  padding: 30px 30px 30px 30px;
+  border-radius: 15px;
+}
+
+.background-image-clouds {
+  max-width: 480px;
+  height: 640px;
+  background-image: url(../img/background-image-clouds.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  transition: all 200ms fade-out 200ms;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  padding: 30px 30px 30px 30px;
+  border-radius: 15px;
+}
+
+.background-image-rain {
+  max-width: 480px;
+  height: 640px;
+  background-image: url(../img/background-image-rain.png);
   background-size: contain;
   background-repeat: no-repeat;
   overflow: hidden;
