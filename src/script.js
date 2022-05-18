@@ -180,17 +180,31 @@ function displayWeatherCondition(response) {
 
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 
-  let displayWeatherCondition = response.data.weather[0].main;
+  let displayWeatherCondition = response.data.weather[0].description;
   if (displayWeatherCondition === "clear sky") {
-    document.querySelector("#situation").innerHTML = "Sunny";
     document.querySelector("#icon").setAttribute("src", "img/sun-icon.png");
     document.querySelector("#container").classList.add("background-image-sun");
     document
       .querySelector("#container")
       .classList.remove("background-image-clouds", "background-image-rain");
-  }
-  if (displayWeatherCondition === "broken clouds") {
-    document.querySelector("#situation").innerHTML = "Cloudy";
+  } else if (
+    displayWeatherCondition === "few clouds" ||
+    displayWeatherCondition === "few clouds: 11-25%"
+  ) {
+    document
+      .querySelector("#icon")
+      .setAttribute("src", "img/sun-clouds-icon.png");
+    document.querySelector("#container").classList.add("background-image-sun");
+    document
+      .querySelector("#container")
+      .classList.remove("background-image-clouds", "background-image-rain");
+  } else if (
+    displayWeatherCondition === "broken clouds" ||
+    displayWeatherCondition === "scattered clouds" ||
+    displayWeatherCondition === "scattered clouds: 25-50%" ||
+    displayWeatherCondition === "broken clouds: 51-84%" ||
+    displayWeatherCondition === "overcast clouds: 85-100%"
+  ) {
     document.querySelector("#icon").setAttribute("src", "img/clouds-icon.png");
     document
       .querySelector("#container")
@@ -198,28 +212,60 @@ function displayWeatherCondition(response) {
     document
       .querySelector("#container")
       .classList.remove("background-image-sun", "background-image-rain");
-  }
-  if (
-    (displayWeatherCondition === "rain",
-    "shower rain",
-    "light rain",
-    "moderate rain",
-    "heavy intensity rain",
-    "very heavy rain",
-    "extreme rain",
-    "freezing rain",
-    "light intensity shower rain",
-    "heavy intensity shower rain",
-    "ragged shower rain")
+  } else if (
+    displayWeatherCondition === "rain" ||
+    displayWeatherCondition === "shower rain" ||
+    displayWeatherCondition === "light rain" ||
+    displayWeatherCondition === "moderate rain" ||
+    displayWeatherCondition === "heavy intensity rain" ||
+    displayWeatherCondition === "very heavy rain" ||
+    displayWeatherCondition === "extreme rain" ||
+    displayWeatherCondition === "freezing rain" ||
+    displayWeatherCondition === "light intensity shower rain" ||
+    displayWeatherCondition === "heavy intensity shower rain" ||
+    displayWeatherCondition === "ragged shower rain"
   ) {
-    document.querySelector("#situation").innerHTML = "Rain";
+    document.querySelector("#icon").setAttribute("src", "img/rain-icon.png");
+    document.querySelector("#container").classList.add("background-image-rain");
+    document
+      .querySelector("#container")
+      .classList.remove("background-image-sun", "background-image-clouds");
+  } else if (
+    displayWeatherCondition === "thunderstorm" ||
+    displayWeatherCondition === "thunderstorm with light rain" ||
+    displayWeatherCondition === "thunderstorm with rain" ||
+    displayWeatherCondition === "thunderstorm wiht heavy rain" ||
+    displayWeatherCondition === "light thunderstorm" ||
+    displayWeatherCondition === "heavy thunderstorm" ||
+    displayWeatherCondition === "ragged thunderstorm" ||
+    displayWeatherCondition === "thunderstorm with light drizzle" ||
+    displayWeatherCondition === "thunderstorm wiht drizzle" ||
+    displayWeatherCondition === "thunderstorm wiht heavy drizzle"
+  ) {
+    document
+      .querySelector("#icon")
+      .setAttribute("src", "img/thunder-storm-icon.png");
+    document.querySelector("#container").classList.add("background-image-rain");
+    document
+      .querySelector("#container")
+      .classList.remove("background-image-clouds", "background-image-sun");
+  } else if (
+    displayWeatherCondition === "light intensity drizzle" ||
+    displayWeatherCondition === "drizzle" ||
+    displayWeatherCondition === "heavy intensity drizzle" ||
+    displayWeatherCondition === "light intensity drizzle rain" ||
+    displayWeatherCondition === "drizzle rain" ||
+    displayWeatherCondition === "heavy intensity drizzle rain" ||
+    displayWeatherCondition === "shower rain and drizzle" ||
+    displayWeatherCondition === "heavy shower rain and drizzle" ||
+    displayWeatherCondition === "shower drizzle"
+  ) {
     document.querySelector("#icon").setAttribute("src", "img/rain-icon.png");
     document.querySelector("#container").classList.add("background-image-rain");
     document
       .querySelector("#container")
       .classList.remove("background-image-sun", "background-image-clouds");
   }
-
   getForecast(response.data.coord);
 }
 
