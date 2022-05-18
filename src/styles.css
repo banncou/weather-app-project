@@ -106,11 +106,10 @@ p {
   font-weight: 200;
   height: 20px;
   line-height: 19px;
-  text-align: left;
+
   list-style: none;
-  position: relative;
+
   margin: 0;
-  padding-left: 15px;
 }
 
 .time {
@@ -121,10 +120,6 @@ p {
   line-height: 19px;
   text-align: left;
   list-style: none;
-  position: relative;
-  margin: 0 0 8px;
-  left: 5px;
-  padding-left: 10px;
 }
 
 .row {
@@ -149,9 +144,9 @@ p {
   margin-top: 50px;
   font-size: 15px;
   font-weight: 200;
-  height: 20px;
   line-height: 19px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .weather-forecast-date {
@@ -225,20 +220,6 @@ p {
   border-radius: 15px;
 }
 
-#description {
-  color: white;
-  font-size: 15px;
-  font-weight: 200;
-  height: 20px;
-  line-height: 19px;
-  text-align: left;
-  list-style: none;
-  position: relative;
-  left: 0;
-  margin: 0 0 8px;
-  padding: 0;
-}
-
 #icon {
   position: relative;
   left: 150px;
@@ -260,11 +241,6 @@ p {
   margin-top: -5px;
   margin-bottom: 10px;
   display: block;
-}
-
-#forecast {
-  display: flex;
-  justify-content: space-between;
 }
 
 a:link {

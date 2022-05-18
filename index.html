@@ -49,65 +49,64 @@
             </form>
           </div>
         </div>
+      </div>
+      <h1 id="city"></h1>
+      <ul class="date">
+        <li id="date"></li>
+      </ul>
+      <ul class="time">
+        <li id="description"></li>
+      </ul>
 
-        <h1 id="city"></h1>
-        <ul class="date">
-          <li id="date"></li>
-        </ul>
-        <ul class="time">
-          <li id="description"></li>
-        </ul>
+      <div class="row">
+        <div class="col-12">
+          <span class="temperature" id="temperature"></span>
+          <span class="units">
+            <a href="#" id="celsius-link">°C</a> |
+            <a href="#" id="fahrenheit-link">°F</a>
+          </span>
 
-        <div class="row">
-          <div class="col-12">
-            <span class="temperature" id="temperature"></span>
-            <span class="units">
-              <a href="#" id="celsius-link">°C</a> |
-              <a href="#" id="fahrenheit-link">°F</a>
-            </span>
-
-            <ul>
-              <li>
-                <div class="row">
-                  <div class="col-6"></div>
-                  <img
-                    src="img/rain-icon.png"
-                    alt="rain"
-                    id="icon"
-                    width="230px"
-                  />
-                </div>
-              </li>
-              <li>
-                Max
-                <span
-                  id="maxTemperature"
-                  class="weather-forecast-temperature-max"
-                ></span
-                >°C
-              </li>
-              <li>
-                Min
-                <span
-                  id="minTemperature"
-                  class="weather-forecast-temperature-min"
-                ></span
-                >°C
-              </li>
-            </ul>
-            <ul class="listTwo">
-              <li>Feels like <span id="feelsLike"></span>°C</li>
-              <li>
-                Wind <span id="wind"></span>km/h | Humidity
-                <span id="humidity"></span>%
-              </li>
-            </ul>
-            <div class="full-week-weather">
-              <h2>5 Day Forecast</h2>
-              <div class="row" id="forecast"></div>
-            </div>
-          </div>
+          <ul>
+            <li>
+              <div class="row">
+                <div class="col-6"></div>
+                <img
+                  src="img/rain-icon.png"
+                  alt="rain"
+                  id="icon"
+                  width="230px"
+                />
+              </div>
+            </li>
+            <li>
+              Max
+              <span
+                id="maxTemperature"
+                class="weather-forecast-temperature-max"
+              ></span
+              >°C
+            </li>
+            <li>
+              Min
+              <span
+                id="minTemperature"
+                class="weather-forecast-temperature-min"
+              ></span
+              >°C
+            </li>
+          </ul>
+          <ul class="listTwo">
+            <li>Feels like <span id="feelsLike"></span>°C</li>
+            <li>
+              Wind <span id="wind"></span>km/h | Humidity
+              <span id="humidity"></span>%
+            </li>
+          </ul>
         </div>
+      </div>
+      <div class="full-week-weather">
+        <h2>5 Day Forecast</h2>
+        <div id="forecast"></div>
       </div>
     </div>
     <small id="open-source-code">
